@@ -26,19 +26,22 @@ def call(Map pipelineParams) {
 
             stage('deploy developmentServer'){
                 steps {
-                    deploy(pipelineParams.developmentServer, pipelineParams.serverPort)
+                    //deploy(pipelineParams.developmentServer, pipelineParams.serverPort)
+                    echo "Dev Deployment"
                 }
             }
 
             stage('deploy staging'){
                 steps {
-                    deploy(pipelineParams.stagingServer, pipelineParams.serverPort)
+                    //deploy(pipelineParams.stagingServer, pipelineParams.serverPort)
+                    echo "Stage Deployment"
                 }
             }
 
             stage('deploy production'){
                 steps {
-                    deploy(pipelineParams.productionServer, pipelineParams.serverPort)
+                    //deploy(pipelineParams.productionServer, pipelineParams.serverPort)
+                    echo "Production Deployment"
                 }
             }
         }
